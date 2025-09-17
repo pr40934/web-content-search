@@ -1,0 +1,218 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Aeonik-Regular';
+  src: url('/fonts/Aeonik-Regular.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aeonik-Medium';
+  src: url('/fonts/Aeonik-Medium.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+    background-image: url(/public/bg_img/bg.png);
+  height: 100vh;
+  background-size: cover;                 
+  background-position: center;
+  /* background-repeat: no-repeat; */
+}
+
+.App{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url(/public/bg_img/ChatGPT\ Image\ Sep\ 16\,\ 2025\,\ 03_06_26\ PM.png);
+  height: 100vh;
+  background-size: cover;                 
+  background-position: center;
+  background-repeat: no-repeat; */
+}
+
+.heroSectionContainer{
+  /* position: absolute;
+  top: 10px; */
+  margin: 40px 0px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0000001f;
+  backdrop-filter: saturate(180%) blur(3px);
+  height: 30%;
+}
+
+.formContainer{
+  padding-bottom: 32px;
+}
+
+.heroTitle{
+  color: white;
+  font-family: 'Aeonik-Medium', sans-serif;
+  padding: 32px;
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.results {
+  /* margin-top: 20px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 60vh; 
+  width: 85%;
+  font-family: 'Aeonik-Regular', sans-serif;
+}
+
+.card {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* border-radius: 5px; */
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #f8f8f8;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.cardTitle{
+  padding: 12px;
+}
+
+.badge {
+  background: #007bff;
+  color: white;
+  padding: 3px 8px;
+  /* border-radius: 12px; */
+  font-size: 0.8rem;
+}
+
+.html-content {
+  background: #eee;
+  padding: 5px;
+  margin-top: 5px;
+  min-height: 50px;
+  max-height: 300px;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.urlInput{
+  padding: 10px 0px;
+  width: 100%;
+  margin-bottom: 22px;
+  background: #ffffff00;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.contentInput{
+  padding: 10px 0px;
+  width: 77%;
+  margin-bottom: 22px;
+  background: #ffffff00;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.searchBtn{
+  font-family: 'Aeonik-Regular', sans-serif;
+  padding: 10px 22px;
+  width: 20%;
+  margin-left: 3%;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  letter-spacing: 1px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.contentInput:focus,
+.contentInput:focus-visible {
+  border: none;
+  outline: none; /* Also remove the focus outline */
+  border-bottom: 1px solid white;
+
+}
+
+.urlInput:focus,
+.urlInput:focus-visible {
+  border: none;
+  outline: none; /* Also remove the focus outline */
+  border-bottom: 1px solid white;
+}
+
+.showHtmlBtn{
+  font-family: 'Aeonik-Regular', sans-serif;
+  padding: 10px 22px;
+  width: 20%;
+  margin-left: 3%;
+  background: #fefefea8;
+  color: #525151;
+  /* border: none; */
+  letter-spacing: 1px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.pre-style {
+  white-space: pre-wrap;
+  font-family: monospace;
+  background: #f4f4f4;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: white; /* Replace with your desired color */
+}
+
+.loading_image{
+  width: 60px;
+  animation: spin360 3s linear infinite;
+}
+
+@keyframes spin360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  background-color: #0000001f;
+  backdrop-filter: saturate(180%) blur(3px);
+}
