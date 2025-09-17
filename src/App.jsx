@@ -33,8 +33,8 @@ function App() {
   const toggleHtml = (idx) => {
     setShowHtmlStates((prev) => ({ ...prev, [idx]: !prev[idx] }));
   };
-
-  return (
+ 
+  return ( 
     <div className="App">
       <div className="heroSectionContainer">
         <h1 className="heroTitle">Website Search</h1>
@@ -62,33 +62,6 @@ function App() {
             type="submit">Search</button>
         </form>
       </div>
-
-      {/* <div className="results">
-        {loading ? (
-        <img
-          className="loading_image"
-          src="/public/imgs/loading-circles-blue-gradient.png"
-          alt="Loading..."
-        />
-      ) : null}
-       
-        {topChunks.map((item, idx) => (
-          <div key={idx} className="card show">
-            <div className="card-header">
-              <span className="badge">{item.match_percentage}% match</span>
-              <button className="showHtmlBtn" onClick={() => toggleHtml(idx)}>
-                {showHtmlStates[idx] ? "Hide HTML" : "Show HTML"}
-              </button>
-            </div>
-            <p className="cardTitle">{item.title}</p>
-            <p className="cardTitle">{item.chunk_text}</p>
-            {showHtmlStates[idx] && (
-              <HtmlPreview rawHtml={item.chunk_html} />
-            )}
-          </div>
-        ))}
-
-      </div> */}
 
       <div className="results">
         {loading ? (
